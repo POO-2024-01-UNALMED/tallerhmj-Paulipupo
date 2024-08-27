@@ -16,7 +16,13 @@ public class Portero extends Futbolista {
     }
 
     public int compareTo(Object portero) {
-        return this.getGolesRecibidos() - ((Portero)portero).getGolesRecibidos();
+        int diferencia = this.getGolesRecibidos() - ((Portero)portero).getGolesRecibidos();
+        if (diferencia < 0) {
+            return -1*diferencia;
+        } 
+        else {
+            return diferencia;
+        } 
     }
 
     @Override
